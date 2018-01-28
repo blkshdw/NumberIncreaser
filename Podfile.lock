@@ -1,0 +1,15 @@
+PODS:
+  - Dip (6.0)
+  - EasyPeasy (1.6.0)
+
+DEPENDENCIES:
+  - Dip
+  - EasyPeasy
+
+SPEC CHECKSUMS:
+  Dip: 316ad036509eaf3ef78e19699f32a9e01a5b3c3e
+  EasyPeasy: aef0a77d7e7636d6b5e046194bc911b0a8d73c88
+
+PODFILE CHECKSUM: f1c994c405a619fef89d54013c7e14adc02580d9
+
+COCOAPODS: 1.4.0
