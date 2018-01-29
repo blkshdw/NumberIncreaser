@@ -10,9 +10,12 @@ import Foundation
 import UIKit
 import Dip
 
+/// An Interactor of NumberScreen
 protocol NumberScreenInteractor: class {
   var view: NumberView! { get set }
+  /// A function that fetches current number from numberManager and sets it to UI
   func refresh()
+  /// A function that handles tap on a number
   func numberTapAction()
 }
 

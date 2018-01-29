@@ -12,8 +12,13 @@ import Dip
 
 protocol SettingsScreenInteractor: class {
   var view: SettingsView! { get set }
+  /// Sets current number to zero
   func reset()
-  func setValues(maxNumber: Int?, incSize: Int?) 
+  
+  /// A function that saves maxNumber and incSize
+  /// - Parameter maxNumber: maximum possible value
+  /// - Parameter incSize: a value that current number is incremented on each tap
+  func saveValues(maxNumber: Int?, incSize: Int?) 
 }
 
 class DefaultSettingsScreenInteractor: SettingsScreenInteractor {
@@ -30,7 +35,7 @@ class DefaultSettingsScreenInteractor: SettingsScreenInteractor {
     self.numberManager = try! deps.resolve()
   }
 
-  func setValues(maxNumber: Int? = nil, incSize: Int? = nil) {
+  func saveValues(maxNumber: Int? = nil, incSize: Int? = nil) {
     numberManager.maxNumber = maxNumber
     numberManager.incSize = incSize ?? 1
     numberManager.save()

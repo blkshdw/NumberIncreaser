@@ -19,4 +19,8 @@ struct Constants {
 
   static let animationDuration = 0.2
 
+  struct accessIdentifiers {
+    static let numberLabel = "numberLabel"
+    static let settingsTable = "settingsTable"
+  }
 }

@@ -10,13 +10,11 @@ import Foundation
 import UIKit
 import Dip
 
-protocol RootView: class {
-  func configure(deps: DependencyContainer)
-}
+/// Root Screeen
+class RootViewController: UITabBarController {
 
-class RootViewController: UITabBarController, RootView {
-
-  func configure(deps: DependencyContainer) {
+  init(deps: DependencyContainer) {
+    super.init(nibName: nil, bundle: nil)
     let settingsViewController = try! deps.resolve() as SettingsViewController
     let numberViewController = try! deps.resolve() as NumberViewController
 
@@ -32,6 +30,10 @@ class RootViewController: UITabBarController, RootView {
     numberNavigationController.title = Constants.number
 
     self.setViewControllers([numberNavigationController, settingsNavigationController], animated: false)
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
   }
 
 }

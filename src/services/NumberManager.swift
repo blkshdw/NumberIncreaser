@@ -9,7 +9,7 @@
 import Foundation
 import Dip
 
-protocol NumberManager {
+protocol NumberManager: class {
   var currentNumber: Int { get set }
   var maxNumber: Int? { get set }
   var incSize: Int { get set }
@@ -17,6 +17,7 @@ protocol NumberManager {
   func save()
 }
 
+/// A class that manages current number that is displayed on "Number" screen and handles option change
 class DefaultNumberManager: NumberManager {
   var storageHelper: StorageHelper!
   var currentNumber: Int = 0 {
@@ -31,14 +32,15 @@ class DefaultNumberManager: NumberManager {
     didSet {
       if let maxNumber = maxNumber, currentNumber > maxNumber {
         currentNumber = 0
+        storageHelper.currentNumber = 0
       }
-      storageHelper.save(maxNumber, forKey: .maxNumber)
+      storageHelper.maxNumber = maxNumber
     }
   }
 
   var incSize: Int = 1 {
     didSet {
-      storageHelper.save(incSize, forKey: .incSize)
+      storageHelper.incSize = incSize
     }
   }
 
@@ -49,13 +51,13 @@ class DefaultNumberManager: NumberManager {
   }
 
   func save() {
-    storageHelper.save(currentNumber, forKey: .currentNumber)
+    storageHelper.currentNumber = currentNumber
   }
 
   init(deps: DependencyContainer) {
     storageHelper = try! deps.resolve()
-    currentNumber = storageHelper.loadObjectForKey(.currentNumber) ?? 0
-    incSize = storageHelper.loadObjectForKey(.incSize) ?? 1
-    maxNumber = storageHelper.loadObjectForKey(.maxNumber)
+    currentNumber = storageHelper.currentNumber
+    incSize = storageHelper.incSize
+    maxNumber = storageHelper.maxNumber
   }
 }

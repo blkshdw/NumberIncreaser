@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.window = UIWindow()
     self.numberManager = try! deps.resolve()
     let rootViewController: RootViewController = try! deps.resolve()
-    rootViewController.configure(deps: deps)
     window?.rootViewController = rootViewController
     window?.makeKeyAndVisible()
 

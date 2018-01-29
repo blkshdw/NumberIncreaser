@@ -9,24 +9,57 @@
 import Foundation
 import UIKit
 
-class StorageHelper {
+/// Manages current number, maximum number and increment number values
+protocol StorageHelper: class {
+  var maxNumber: Int? { get set }
+  var incSize: Int { get set }
+  var currentNumber: Int { get set }
+}
+
+class DefaultStorageHelper: StorageHelper {
   enum StorageKey: String {
     case currentNumber
     case incSize
     case maxNumber
   }
 
-  func save(_ object: Any?, forKey key: StorageKey) {
+  var maxNumber: Int? {
+    get {
+      return loadObjectForKey(.maxNumber)
+    }
+    set {
+      save(newValue, forKey: .maxNumber)
+    }
+  }
+
+  var incSize: Int {
+    get {
+      return loadObjectForKey(.incSize) ?? 1
+
+    }
+    set {
+      save(newValue, forKey: .incSize)
+    }
+  }
+
+  var currentNumber: Int {
+    get {
+      return loadObjectForKey(.currentNumber) ?? 0
+    }
+    set {
+      save(newValue, forKey: .currentNumber)
+    }
+  }
+
+  private func save(_ object: Any?, forKey key: StorageKey) {
     let userDefaults = UserDefaults.standard
     userDefaults.set(object, forKey: key.rawValue)
   }
 
-  func loadObjectForKey<T>(_ key: StorageKey) -> T? {
+  private func loadObjectForKey<T>(_ key: StorageKey) -> T? {
     let userDefaults = UserDefaults.standard
     let object = userDefaults.object(forKey: key.rawValue)
     return object as? T
   }
 
 }
-
-

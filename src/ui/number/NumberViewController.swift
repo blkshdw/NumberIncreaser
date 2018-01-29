@@ -13,7 +13,6 @@ import EasyPeasy
 protocol NumberView: class {
   var interactor: NumberScreenInteractor? { get set }
   var currentNumber: Int? { get set }
-
 }
 
 class NumberViewController: UIViewController, NumberView {
@@ -43,6 +42,7 @@ class NumberViewController: UIViewController, NumberView {
   func setupView() {
     numberLabel.font = UIFont.systemFont(ofSize: 100)
     numberLabel.isUserInteractionEnabled = true
+    numberLabel.accessibilityIdentifier = Constants.accessIdentifiers.numberLabel
     numberLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(numberTapped)))
     view.addSubview(numberLabel)
     numberLabel.adjustsFontSizeToFitWidth = true
@@ -58,12 +58,5 @@ class NumberViewController: UIViewController, NumberView {
   @objc func numberTapped() {
     interactor?.numberTapAction()
   }
-
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
 
 }

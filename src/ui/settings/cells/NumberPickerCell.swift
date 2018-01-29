@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import EasyPeasy
 
+/// A cell that contains input field with number pad
 class NumberPickerCell: UITableViewCell {
   private let titleLabel = UILabel()
   private let inputField = UITextField()

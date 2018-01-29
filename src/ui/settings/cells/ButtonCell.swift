@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import EasyPeasy
 
+/// A cell that contains a single centered label
 class ButtonCell: UITableViewCell {
   let titleLabel = UILabel()
 

@@ -9,14 +9,15 @@
 import Foundation
 import Dip
 
+/// Default application container
 enum AppContainer {
 
   static func configure(overrideConfig: ((DependencyContainer) -> Void)? = nil) -> DependencyContainer {
     return DependencyContainer { deps in
 
       deps.register(.singleton) { DefaultNumberManager(deps: deps) as NumberManager }
-      deps.register(.singleton) { StorageHelper() }
-      deps.register(.singleton) { RootViewController() }
+      deps.register(.singleton) { DefaultStorageHelper() as StorageHelper }
+      deps.register() { RootViewController(deps: deps) }
 
       deps.collaborate(with: SettingsScreen.configure())
       deps.collaborate(with: NumberScreen.configure())

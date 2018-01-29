@@ -12,6 +12,13 @@
 		8803576F201E2F010087E43F /* NumberPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803576E201E2F010087E43F /* NumberPickerCell.swift */; };
 		88035772201E31C90087E43F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88035771201E31C90087E43F /* Constants.swift */; };
 		88035774201E352D0087E43F /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88035773201E352D0087E43F /* ButtonCell.swift */; };
+		88035776201E5DE20087E43F /* NumberManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88035775201E5DE20087E43F /* NumberManagerTest.swift */; };
+		882895CA201E7BDB00927998 /* NumberScreenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882895C9201E7BDB00927998 /* NumberScreenTestCase.swift */; };
+		882895CB201E817B00927998 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88035771201E31C90087E43F /* Constants.swift */; };
+		882895CC201E817C00927998 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88035771201E31C90087E43F /* Constants.swift */; };
+		882895CE201E877B00927998 /* SettingsScreenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882895CD201E877B00927998 /* SettingsScreenTestCase.swift */; };
+		882895D4201E91CB00927998 /* MockStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882895D2201E91B500927998 /* MockStorageHelper.swift */; };
+		882895D6201E957A00927998 /* NumberScreenInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882895CF201E8F9400927998 /* NumberScreenInteractorTest.swift */; };
 		8854FFE4201B2FE4006534B3 /* NumberScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854FFE3201B2FE4006534B3 /* NumberScreen.swift */; };
 		8854FFE6201B375E006534B3 /* NumberManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854FFE5201B375E006534B3 /* NumberManager.swift */; };
 		8854FFE8201B3BAA006534B3 /* NumberScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854FFE7201B3BA9006534B3 /* NumberScreenInteractor.swift */; };
@@ -19,14 +26,12 @@
 		8854FFEF201B8634006534B3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854FFEE201B8634006534B3 /* RootViewController.swift */; };
 		8854FFF5201C6679006534B3 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854FFF4201C6679006534B3 /* SettingsScreen.swift */; };
 		8854FFF7201C670D006534B3 /* SettingsScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854FFF6201C670D006534B3 /* SettingsScreenInteractor.swift */; };
-		8854FFFA201DED6C006534B3 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854FFF9201DED6C006534B3 /* RootScreen.swift */; };
 		889EA665201A695700E7EB8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889EA664201A695700E7EB8A /* AppDelegate.swift */; };
 		889EA667201A695700E7EB8A /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889EA666201A695700E7EB8A /* NumberViewController.swift */; };
 		889EA669201A695700E7EB8A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889EA668201A695700E7EB8A /* SettingsViewController.swift */; };
 		889EA66E201A695700E7EB8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 889EA66D201A695700E7EB8A /* Assets.xcassets */; };
 		889EA671201A695700E7EB8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889EA66F201A695700E7EB8A /* LaunchScreen.storyboard */; };
-		889EA67C201A695800E7EB8A /* NumberIncreaserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889EA67B201A695800E7EB8A /* NumberIncreaserTests.swift */; };
-		889EA687201A695800E7EB8A /* NumberIncreaserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889EA686201A695800E7EB8A /* NumberIncreaserUITests.swift */; };
+		88BCD0E2201E9BA300D510C9 /* SettingsScreenInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BCD0E1201E9BA300D510C9 /* SettingsScreenInteractorTest.swift */; };
 		A28351AE24C8A97FDC74CCBB /* Pods_NumberIncreaserUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12A330B9E9F03C2E8C852D2 /* Pods_NumberIncreaserUITests.framework */; };
 		D49DE0AAA369F49409ED415A /* Pods_NumberIncreaser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CC3D6CDED9E0A5F31D3081 /* Pods_NumberIncreaser.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +63,11 @@
 		8803576E201E2F010087E43F /* NumberPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPickerCell.swift; sourceTree = "<group>"; };
 		88035771201E31C90087E43F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		88035773201E352D0087E43F /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		88035775201E5DE20087E43F /* NumberManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberManagerTest.swift; sourceTree = "<group>"; };
+		882895C9201E7BDB00927998 /* NumberScreenTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberScreenTestCase.swift; sourceTree = "<group>"; };
+		882895CD201E877B00927998 /* SettingsScreenTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenTestCase.swift; sourceTree = "<group>"; };
+		882895CF201E8F9400927998 /* NumberScreenInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberScreenInteractorTest.swift; sourceTree = "<group>"; };
+		882895D2201E91B500927998 /* MockStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageHelper.swift; sourceTree = "<group>"; };
 		8854FFE3201B2FE4006534B3 /* NumberScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberScreen.swift; sourceTree = "<group>"; };
 		8854FFE5201B375E006534B3 /* NumberManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberManager.swift; sourceTree = "<group>"; };
 		8854FFE7201B3BA9006534B3 /* NumberScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberScreenInteractor.swift; sourceTree = "<group>"; };
@@ -65,7 +75,6 @@
 		8854FFEE201B8634006534B3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		8854FFF4201C6679006534B3 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		8854FFF6201C670D006534B3 /* SettingsScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenInteractor.swift; sourceTree = "<group>"; };
-		8854FFF9201DED6C006534B3 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		889EA661201A695700E7EB8A /* NumberIncreaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberIncreaser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		889EA664201A695700E7EB8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		889EA666201A695700E7EB8A /* NumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
@@ -74,11 +83,10 @@
 		889EA670201A695700E7EB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		889EA672201A695700E7EB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		889EA677201A695800E7EB8A /* NumberIncreaserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberIncreaserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		889EA67B201A695800E7EB8A /* NumberIncreaserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberIncreaserTests.swift; sourceTree = "<group>"; };
 		889EA67D201A695800E7EB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		889EA682201A695800E7EB8A /* NumberIncreaserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberIncreaserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		889EA686201A695800E7EB8A /* NumberIncreaserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberIncreaserUITests.swift; sourceTree = "<group>"; };
 		889EA688201A695800E7EB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88BCD0E1201E9BA300D510C9 /* SettingsScreenInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenInteractorTest.swift; sourceTree = "<group>"; };
 		91CC3D6CDED9E0A5F31D3081 /* Pods_NumberIncreaser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NumberIncreaser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF59A6EF22243310D36E6867 /* Pods-NumberIncreaserUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumberIncreaserUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NumberIncreaserUITests/Pods-NumberIncreaserUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D12A330B9E9F03C2E8C852D2 /* Pods_NumberIncreaserUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NumberIncreaserUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +147,14 @@
 				88035773201E352D0087E43F /* ButtonCell.swift */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		882895D1201E91A600927998 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				882895D2201E91B500927998 /* MockStorageHelper.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		8854FFD8201A70E1006534B3 /* src */ = {
@@ -224,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				8854FFEE201B8634006534B3 /* RootViewController.swift */,
-				8854FFF9201DED6C006534B3 /* RootScreen.swift */,
 			);
 			path = root;
 			sourceTree = "<group>";
@@ -253,8 +268,11 @@
 		889EA67A201A695800E7EB8A /* NumberIncreaserTests */ = {
 			isa = PBXGroup;
 			children = (
-				889EA67B201A695800E7EB8A /* NumberIncreaserTests.swift */,
+				88BCD0E1201E9BA300D510C9 /* SettingsScreenInteractorTest.swift */,
+				882895CF201E8F9400927998 /* NumberScreenInteractorTest.swift */,
+				88035775201E5DE20087E43F /* NumberManagerTest.swift */,
 				889EA67D201A695800E7EB8A /* Info.plist */,
+				882895D1201E91A600927998 /* Mock */,
 			);
 			path = NumberIncreaserTests;
 			sourceTree = "<group>";
@@ -262,7 +280,8 @@
 		889EA685201A695800E7EB8A /* NumberIncreaserUITests */ = {
 			isa = PBXGroup;
 			children = (
-				889EA686201A695800E7EB8A /* NumberIncreaserUITests.swift */,
+				882895CD201E877B00927998 /* SettingsScreenTestCase.swift */,
+				882895C9201E7BDB00927998 /* NumberScreenTestCase.swift */,
 				889EA688201A695800E7EB8A /* Info.plist */,
 			);
 			path = NumberIncreaserUITests;
@@ -577,7 +596,6 @@
 			files = (
 				8854FFE8201B3BAA006534B3 /* NumberScreenInteractor.swift in Sources */,
 				8854FFEA201B5BAD006534B3 /* AppContainer.swift in Sources */,
-				8854FFFA201DED6C006534B3 /* RootScreen.swift in Sources */,
 				889EA669201A695700E7EB8A /* SettingsViewController.swift in Sources */,
 				8854FFF7201C670D006534B3 /* SettingsScreenInteractor.swift in Sources */,
 				889EA665201A695700E7EB8A /* AppDelegate.swift in Sources */,
@@ -597,7 +615,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				889EA67C201A695800E7EB8A /* NumberIncreaserTests.swift in Sources */,
+				88035776201E5DE20087E43F /* NumberManagerTest.swift in Sources */,
+				882895CB201E817B00927998 /* Constants.swift in Sources */,
+				88BCD0E2201E9BA300D510C9 /* SettingsScreenInteractorTest.swift in Sources */,
+				882895D6201E957A00927998 /* NumberScreenInteractorTest.swift in Sources */,
+				882895D4201E91CB00927998 /* MockStorageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +627,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				889EA687201A695800E7EB8A /* NumberIncreaserUITests.swift in Sources */,
+				882895CE201E877B00927998 /* SettingsScreenTestCase.swift in Sources */,
+				882895CA201E7BDB00927998 /* NumberScreenTestCase.swift in Sources */,
+				882895CC201E817C00927998 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,7 +807,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7HLY3EQ26F;
-				INFOPLIST_FILE = NumberIncreaserTests/Info.plist;
+				INFOPLIST_FILE = test/NumberIncreaserTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = number.NumberIncreaserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -801,7 +825,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7HLY3EQ26F;
-				INFOPLIST_FILE = NumberIncreaserTests/Info.plist;
+				INFOPLIST_FILE = test/NumberIncreaserTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = number.NumberIncreaserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -818,7 +842,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7HLY3EQ26F;
-				INFOPLIST_FILE = NumberIncreaserUITests/Info.plist;
+				INFOPLIST_FILE = test/NumberIncreaserUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = number.NumberIncreaserUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -835,7 +859,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7HLY3EQ26F;
-				INFOPLIST_FILE = NumberIncreaserUITests/Info.plist;
+				INFOPLIST_FILE = test/NumberIncreaserUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = number.NumberIncreaserUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

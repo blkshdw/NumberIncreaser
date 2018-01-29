@@ -11,7 +11,10 @@ import EasyPeasy
 
 protocol SettingsView: class {
   var interactor: SettingsScreenInteractor? { get set }
-
+  
+  /// A function that sets values to maxNumber and incSize table view cells
+  /// - Parameter maxNumber: maximum possible value
+  /// - Parameter incSize: a value that current number is incremented on each tap
   func setValues(maxNumber: Int?, incSize: Int?)
 }
 
@@ -62,6 +65,7 @@ class SettingsViewController: UITableViewController, SettingsView {
   override func viewDidLoad() {
     super.viewDidLoad()
     title = navigationController?.title
+    tableView.accessibilityIdentifier = Constants.accessIdentifiers.settingsTable
     setupView()
     setupHandlers()
     navigationItem.rightBarButtonItem = UIBarButtonItem(title: Constants.save, style: .done, target: self, action: #selector(saveValues))
@@ -69,7 +73,7 @@ class SettingsViewController: UITableViewController, SettingsView {
   }
 
   @objc func saveValues() {
-    interactor?.setValues(maxNumber: maxNumberPickerCell.number, incSize: incrementSizeCell.number)
+    interactor?.saveValues(maxNumber: maxNumberPickerCell.number, incSize: incrementSizeCell.number)
     if let selectedPath = tableView.indexPathForSelectedRow {
       tableView.deselectRow(at: selectedPath, animated: true)
     }
